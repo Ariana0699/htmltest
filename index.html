@@ -12,7 +12,8 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: Inter, sans-serif;
+            background: white;
         }
         #numpad {
             display: grid;
@@ -22,13 +23,21 @@
         .num-button {
             width: 60px;
             height: 60px;
-            font-size: 24px;
-            text-align: center;
-            line-height: 60px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            padding: 10px;
+            background: #EEEEEE;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 134px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             cursor: pointer;
-            user-select: none;
+            transition: background 300ms ease-out;
+        }
+        .Btn:hover {
+            background: #CCCCCC;
+        }
+        .Btn:active {
+            background: #BFBFBF;
         }
         input {
             width: 200px;
@@ -37,10 +46,37 @@
             text-align: center;
             margin-bottom: 20px;
         }
+        .HangupButton, .PickupButton {
+            width: 41.88px;
+            height: 20.08px;
+            position: relative;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.30);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background 300ms ease-out;
+        }
+        .HangupButton:hover .Hangup, .PickupButton:hover .Pickup {
+            background: #BFBFBF;
+        }
+        .Hangup {
+            width: 41.88px;
+            height: 20.08px;
+            background: #F24E1E;
+        }
+        .Pickup {
+            width: 41.88px;
+            height: 20.08px;
+            background: #4ECB71;
+        }
         #info {
             margin-top: 20px;
             font-size: 18px;
             color: #333;
+        }
+         #call-buttons {
+            display: none;
         }
     </style>
 </head>
@@ -72,7 +108,7 @@
         const buttons = document.querySelectorAll(".num-button");
         const infoDiv = document.getElementById("info");
         const callButton = document.querySelector("#call-button");
-        const infoButton = document.querySelector("#info-button");
+        // const infoButton = document.querySelector("#info-button");
         const hangUpButton = document.querySelector("#hang-up");
 
 
@@ -84,8 +120,8 @@
         callButton.addEventListener("click", () => {callButtonClicked()});
         hangUpButton.addEventListener("click", () => {endCall()});
 
-        document.querySelector("#accept-call-btn").addEventListener("click", acceptCall)
-        document.querySelector("#reject-call-btn").addEventListener("click", rejectCall)
+        document.querySelector("#accept-call-btn").addEventListener("click", acceptCall);
+        document.querySelector("#reject-call-btn").addEventListener("click", rejectCall);
         
 class Controller {
     constructor(ens){
