@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const buttons = document.querySelectorAll(".num-button");
     const infoDiv = document.getElementById("info");
     const callButton = document.querySelector("#call-button");
+    const infoButton = document.querySelector("#info-button");
     const hangUpButton = document.querySelector("#hang-up");
 
     buttons.forEach(button => {
