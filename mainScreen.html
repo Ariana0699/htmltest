@@ -14,21 +14,21 @@
         <ul id="recent-calls" class="call-log"></ul>
     </div> -->
     <div class="main">
-      <div class="container-wrapper">
-        <div class="container">
-          <div class="text-input"><div class="text-wrapper">Enter Number</div></div>
-          <div class="call-button"><div class="div">Call</div></div>
-          <div class="call-log">
-            <div class="call-details">
-              <div class="overlap-group">
-                <div class="contact-name"><div class="text-wrapper-2">Contact Name</div></div>
-                <div class="call-time"><div class="text-wrapper-3">Call Time</div></div>
-              </div>
-              <div class="call-icon"></div>
+        <div class="container-wrapper">
+            <div class="container">
+                <input type="text" class="text-input" id="input-number" placeholder="Enter number" />
+                <button class="call-button" id="call-button">Call</button>
+                <div class="call-log" id="recent-calls">
+                    <div class="call-details" style="display: none;"> <!-- Hide this template -->
+                        <div class="overlap-group">
+                            <div class="contact-name"><div class="text-wrapper-2">Contact Name</div></div>
+                            <div class="call-time"><div class="text-wrapper-3">Call Time</div></div>
+                        </div>
+                        <div class="call-icon"></div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
     <script src="mainScreenScripts.js"></script>  
 </body>
