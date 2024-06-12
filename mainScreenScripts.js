@@ -4,6 +4,7 @@ const recentCalls = document.getElementById("recent-calls");
 document.querySelector("button").addEventListener("click", () => {
     console.log("calling...", input.value);
     if (input.value !== "") {
+    console.log("calling prior to passing message...", input.value);
         window.parent.postMessage(JSON.stringify({ action: "call", to: input.value }), "*");
     }
 });
