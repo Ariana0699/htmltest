@@ -14,6 +14,7 @@
   width: 360px; /* Adjusted width to fit content better */
   padding: 20px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;  /* Ensure this is correctly set */
 }
 
 .main .container {
