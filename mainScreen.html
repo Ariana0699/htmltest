@@ -97,10 +97,10 @@
             }
         });
 
-        logButton.addEventListener("click", () => {
-            console.log("navigating...");
-                window.parent.postMessage(JSON.stringify({ action: "get-logs", to: input.value }), "*");
-        });
+        // logButton.addEventListener("click", () => {
+        //     console.log("navigating...");
+        //         window.parent.postMessage(JSON.stringify({ action: "get-logs", to: input.value }), "*");
+        // });
     
         window.addEventListener("load", () => {
             window.parent.postMessage(JSON.stringify({ action: "get-logs" }), "*");
