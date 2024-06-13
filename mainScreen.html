@@ -80,27 +80,19 @@
 <body>
     <div class="container">
         <input type="text" placeholder="Enter number">
-        <button id="callButton">Call</button>
+        <button>Call</button>
         <ul id="recent-calls" class="call-log"></ul>
-<!--         <button id="logButton">Logs</button> -->
     </div>
     <script>
         const input = document.querySelector("input");
         const recentCalls = document.getElementById("recent-calls");
-        const callButton = document.getElementById("callButton");
-        const logButton = document.getElementById("logButton");
     
-        callButton.addEventListener("click", () => {
+        document.querySelector("button").addEventListener("click", () => {
             console.log("calling...", input.value);
             if (input.value !== "") {
                 window.parent.postMessage(JSON.stringify({ action: "call", to: input.value }), "*");
             }
         });
-
-        // logButton.addEventListener("click", () => {
-        //     console.log("navigating...");
-        //         window.parent.postMessage(JSON.stringify({ action: "get-logs", to: input.value }), "*");
-        // });
     
         window.addEventListener("load", () => {
             window.parent.postMessage(JSON.stringify({ action: "get-logs" }), "*");
