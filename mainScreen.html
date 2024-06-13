@@ -88,12 +88,18 @@
         const input = document.querySelector("input");
         const recentCalls = document.getElementById("recent-calls");
         const callButton = document.getElementById("callButton");
+        const logButton = document.getElementById("logButton");
     
         callButton.addEventListener("click", () => {
             console.log("calling...", input.value);
             if (input.value !== "") {
                 window.parent.postMessage(JSON.stringify({ action: "call", to: input.value }), "*");
             }
+        });
+
+        logButton.addEventListener("click", () => {
+            console.log("navigating...");
+                window.parent.postMessage(JSON.stringify({ action: "get-logs" }), "*");
         });
     
         window.addEventListener("load", () => {
