@@ -80,14 +80,16 @@
 <body>
     <div class="container">
         <input type="text" placeholder="Enter number">
-        <button>Call</button>
+        <button id="callButton">Call</button>
         <ul id="recent-calls" class="call-log"></ul>
+        <button id="logButton"></button>
     </div>
     <script>
         const input = document.querySelector("input");
         const recentCalls = document.getElementById("recent-calls");
+        const callButton = document.getElementById("callButton");
     
-        document.querySelector("button").addEventListener("click", () => {
+        callButton.addEventListener("click", () => {
             console.log("calling...", input.value);
             if (input.value !== "") {
                 window.parent.postMessage(JSON.stringify({ action: "call", to: input.value }), "*");
