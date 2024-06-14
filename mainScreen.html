@@ -16,6 +16,7 @@
             align-items: center;
             height: 100vh;
             color: #333;
+            overflow: hidden; /* Prevent scrolling on the body */
         }
         .container {
             width: 100%;
@@ -23,7 +24,9 @@
             background: white;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            overflow: hidden;
+            overflow-y: auto; /* Allow vertical scrolling within the container */
+            /* overflow: hidden; */
+            max-height: calc(100vh - 40px); /* Prevent the container from being taller than the viewport */
         }
         input[type="text"] {
             width: calc(100% - 20px);
