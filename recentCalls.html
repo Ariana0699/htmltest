@@ -39,8 +39,10 @@
     <ul id="recent-calls" class="call-log"></ul>
     <script>
         window.addEventListener("load", () => {
+            console.log("loading recentCalls...")
             // Assume the parent will send call logs data to this iframe
             window.parent.postMessage(JSON.stringify({ action: "get-logs" }), "*");
+            console.log("recentCalls posted message get-logs")
         });
     
         window.addEventListener("message", event => {
