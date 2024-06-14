@@ -68,10 +68,10 @@
         const rejectButton = document.querySelector(".reject")
 
         acceptButton.addEventListener("click", ()=>{
-            window.parent.postMessage(JSON.stringify({action:"accept-call", from:from}), "https://htmltest-theta.vercel.app/background.html")
+            window.parent.postMessage(JSON.stringify({action:"accept-call", from:from}), "https://htmltest-logs-ariana0699s-projects.vercel.app/background.html")
         })
         rejectButton.addEventListener("click", ()=>{
-            window.parent.postMessage(JSON.stringify({action:"reject-call", from:from}), "https://htmltest-theta.vercel.app/background.html")
+            window.parent.postMessage(JSON.stringify({action:"reject-call", from:from}), "https://htmltest-logs-ariana0699s-projects.vercel.app/background.html")
         })
     </script>
 </body>
