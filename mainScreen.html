@@ -12,6 +12,7 @@
             padding: 0;
             background-color: #f0f0f0;
             display: flex;
+            flex-direction: column; /* Align children vertically */
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -54,6 +55,8 @@
             margin: 0;
             padding: 0;
             list-style: none;
+            overflow-y: auto; /* Allows scrolling within the call log */
+            flex-grow: 1; /* Allow call log to take up any remaining space */
         }
         .call-entry {
             display: flex;
