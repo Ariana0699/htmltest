@@ -98,8 +98,9 @@
         });
 
         logButton.addEventListener("click", () => {
-            console.log("navigating...");
-                window.parent.postMessage(JSON.stringify({ action: "get-logs" }), "*");
+            console.log("Navigating to call log screen...");
+            controller.setPage('recentCalls');
+                // window.parent.postMessage(JSON.stringify({ action: "get-logs" }), "*");
         });
     
         window.addEventListener("load", () => {
