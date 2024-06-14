@@ -219,7 +219,9 @@
                     break;
                 case 'get-logs':
                     controller.getLogs();
-                    break   
+                    break
+                case 'navigate':
+                    controller.setPage(data.page);   
                 default:
                     console.log('Unknown action');
                     break;
