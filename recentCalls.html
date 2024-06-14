@@ -100,6 +100,10 @@
                                 <div class="call-time">${timeOrDate}</div>
                             </div>
                             <span class="call-icon material-symbols-outlined">${iconSymbol}</span>`;
+                        li.addEventListener('click', () => {
+                            console.log("Re-calling...", contact);
+                            window.parent.postMessage(JSON.stringify({ action: "call", to: contact }), "*");
+                        });    
                         recentCalls.appendChild(li);
                     });
                 }
