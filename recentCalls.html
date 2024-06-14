@@ -65,7 +65,7 @@
 
         backButton.addEventListener("click", () => {
             console.log("Requesting to return to main screen...");
-                window.parent.postMessage(JSON.stringify({ action: "navigate", page: main }), "*");
+                window.parent.postMessage(JSON.stringify({ action: "navigate", page: "main" }), "*");
         });
 
         window.addEventListener("load", () => {
